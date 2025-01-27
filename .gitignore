@@ -4,10 +4,10 @@
 /src/**/*.d.ts
 
 # Output files
-*.csv
+/flashlights.csv
 
 # Dependencies
-/node_modules
+node_modules/
 
 # IDE specific files
 .vscode/*
