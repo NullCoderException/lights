@@ -7,6 +7,7 @@ export enum BatteryType {
   TWENTY1700 = "21700",
   DUAL_FUEL_AA = "AA/14500", // For your Ryder and other dual fuel lights
   DUAL_FUEL_AAA = "AAA/10440", // For future compatibility
+  BUILT_IN = "Built-in", // For non-replaceable batteries,
 }
 
 export enum Manufacturer {
@@ -14,6 +15,8 @@ export enum Manufacturer {
   WURKKOS = "Wurkkos",
   SOFIRN = "Sofirn",
   SKILLHUNT = "Skilhunt",
+  OLIGHT = "Olight",
+  NITECORE = "Nitecore",
   CONVOY = "Convoy",
   EMISAR = "Emisar",
 }
@@ -32,10 +35,31 @@ export enum ShippingStatus {
   ORDERED = "Ordered",
 }
 
+export enum EmitterColor {
+  WHITE = "White",
+  RED = "Red",
+  GREEN = "Green",
+  BLUE = "Blue",
+  UV = "UV",
+  RGB = "RGB",
+  LASER_GREEN = "Green Laser",
+  LASER_RED = "Red Laser",
+}
+
 export interface Emitter {
   type: string;
-  cct: string;
+  cct: string | null; // Can be null for non-white emitters
   count: number;
+  color: EmitterColor; // Defaults to WHITE if not specified
+}
+
+export enum FormFactor {
+  TUBE = "Tube",
+  RIGHT_ANGLE = "Right Angle",
+  HEADLAMP = "Headlamp",
+  FLAT = "Flat",
+  COMPACT = "Compact",
+  MULTI_FUNCTION = "Multi-Function",
 }
 
 export interface Flashlight {
@@ -48,6 +72,7 @@ export interface Flashlight {
   driver: string;
   ui: string;
   anduril: boolean;
+  form_factors: FormFactor[];
   special_features: string[];
   notes: string;
   purchase_date: string;

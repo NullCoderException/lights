@@ -12,6 +12,7 @@ const headers: CSVRow = [
   "Model",
   "Finish",
   "Finish Group",
+  "Form Factors",
   "Battery Type",
   "Primary Emitter",
   "Primary CCT",
@@ -32,7 +33,7 @@ lights.forEach((light) => {
   const primaryEmitter = light.emitters[0];
   const additionalEmitters = light.emitters
     .slice(1)
-    .map((e) => `${e.count}x ${e.type} ${e.cct}`)
+    .map((e) => `${e.count}x ${e.type} ${e.cct ?? e.color}`)
     .join("; ");
 
   const row: CSVRow = [
@@ -40,9 +41,10 @@ lights.forEach((light) => {
     light.model,
     light.finish,
     light.finish_group,
+    light.form_factors.join("; "),
     light.battery_type,
     `${primaryEmitter.count}x ${primaryEmitter.type}`,
-    primaryEmitter.cct,
+    primaryEmitter.cct ?? primaryEmitter.color ?? "N/A",
     additionalEmitters,
     light.driver,
     light.ui,
@@ -62,4 +64,4 @@ console.log("Sample CSV Format:\n");
 console.log(csv);
 
 // Write files
-fs.writeFileSync("detailed.csv", csv);
+fs.writeFileSync("flashlights.csv", csv);
