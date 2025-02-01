@@ -1,0 +1,33 @@
+Manufacturer,Model,Finish,Finish Group,Form Factors,Battery Type,Primary Emitter,Primary CCT,Additional Emitters,Driver,UI,Special Features,Notes,Purchase Date,Shipping Status,Status
+Acebeam,E75,Teal,Anodized,Tube,21700,4x 519A,5000K,,Buck,Dual Switch,USB-C charging; TIR optic,,2024,Received,Active
+Acebeam,L35 2.0,Marbled MAO,MAO,Tube,21700,1x SFT-70,6500K,,Buck,Dual Switch,MAO finish; TIR optic,,2024,Received,Active
+Acebeam,E70 Mini,Stonewashed Titanium,Titanium,Tube,18350,3x 519A,5000K,,Buck,Side Switch,Titanium construction; USB-C charging,,2025,Received,Active
+Acebeam,Rider RX 2.0,Titanium,Titanium,Tube; Compact,AA/14500,1x 519A,5000K,,Buck,Tail Switch,Titanium construction; Dual fuel,,2025,Received,Active
+Acebeam,Tac AA,Coyote,Anodized,Tube,AA/14500,1x 519A,5000K,,Buck,Tail Switch,Dual fuel,,2025,Received,Active
+Acebeam,Pokelit,Green,Anodized,Tube; Compact,AA/14500,1x 219F,5000K,,Buck,Tail Switch,Dual fuel; EDC,,2025,Received,Active
+Acebeam,Pokelit,Stonewashed Titanium,Titanium,Tube; Compact,AA/14500,1x ?,6500K,,Buck,Tail Switch,Dual fuel; Titanium construction,Cool white version,2025,Received,Active
+Acebeam,Pokelit,Cracked Titanium,Titanium,Tube; Compact,AA/14500,1x 519A,5000K,,Buck,Side Switch,Dual fuel; Titanium construction; Cracked finish,No memory version,2025,Received,Active
+Convoy,S2+,White MAO,MAO,Tube,18650,1x B35AM,4500K,,12-Group,Click,MAO finish; High CRI,,2025,Received,Active
+Emisar,D4K,Stone White,MAO,Tube,21700,2x 519A,5700K,2x W1 6000K,Linear + FET,Anduril 2,Dual channel; RGB aux LEDs; MAO finish,Flood + Throw combo,2025,Received,Active
+Emisar,D3AA,Gray,Anodized,Tube,AA/14500,3x FFL351A,4000K,,Boost,Anduril 2,RGB aux LEDs; Triple emitter; Dual fuel,,2024,Received,Active
+Fireflies,X4Q Comet,Desert Tan,Anodized,Tube,21700,4x FFL351A,5000K,,FET,Anduril 2,High CRI; RGB aux LEDs,,2025,Ordered,Active
+Skilhunt,E3A,Slate Blue,Anodized,Tube; Keychain,AAA/10440,1x LH351B,5000K,,Linear,Twist,Keychain light; IPX-8 waterproof; Bead surface lens,Single mode 100 lumen keychain light,2025,Received,Active
+Sofirn,SC13A,Black,Anodized,Tube; Compact,18350,1x 519A,5000K,,Linear + FET,Anduril 2,Aux LEDs,,2025,Received,Active
+Sofirn,HS21,Black,Anodized,Tube; Headlamp,18650,1x SFT40,6500K,6x CSP1919 5000K; 6x HFL1-R Red,Buck,Rotary,Headlamp; Dual emitter; Red light,Primary headlamp,2024,Received,Active
+Sofirn,HD25LR,Black,Anodized,Tube; Headlamp,18650,1x LH351D,5000K,1x SST20-DR Red,Buck,Side Switch,Headlamp; USB charging,Old headlamp,2024,Received,Active
+Sofirn,IF24 Pro,Black,Anodized,Tube; Multi-Function,18650,1x SFT40,5000K,22x CSP1313 5000K; 15x FY-1615RGY RGB,Buck,Rotary + Side Switch,Rotary mode select; RGB side lights; USB-C charging; Magnetic tail; Multiple light sources,"Multifunction light with white, RGB, and special modes",2025,Received,Active
+Wurkkos,FC11C,Orange,Anodized,Tube,18650,1x 519A,4000K,,Buck,Side Switch,USB-C charging; Magnetic tail,,2024,Received,Active
+Wurkkos,FC11C,Green,Anodized,Tube,18650,1x 519A,5000K,,Buck,Side Switch,USB-C charging; Magnetic tail,,2025,Received,Active
+Wurkkos,FC11,Black,Anodized,Tube,18650,1x 519A,5000K,,Linear + FET,Side Switch,USB-C charging; Magnetic tail,Original FC11 version,2024,Received,Active
+Wurkkos,HD01 Pro,Orange,Anodized,Flat; Multi-Function,Built-in,1x HM,6500K,16x CSP1313 6500K; 1x UV 365nm; 15x RGB RGB; 1x Green Laser Green,Linear + FET,Dual Side Switch,UV light; Green laser; RGB aux; USB-C charging; Magnetic tail; ATR,"Multi-function light with UV, laser, and RGB aux",2025,Received,Active
+Wurkkos,HD10,White MAO,MAO,Tube; Compact; Right Angle; Headlamp,21700,3x CSP2323,4000K,,Buck,Side Switch,MAO finish; Right angle light,,2025,Received,Active
+Wurkkos,TS11,Orange,Anodized,Tube,21700,1x SFT40,6000K,,Linear + FET,Anduril 2,RGB aux LEDs,,2025,Received,Active
+Wurkkos,TD05,Black,Anodized,Tube,18650,1x SFT40,5000K,,Buck,Dual Switch,Side + Tail switch,,2025,Received,Active
+Wurkkos,HD20,Green,Anodized,Tube; Right Angle; Headlamp,21700,1x LH351D,5000K,1x XP-L HD 5000K,Buck,Side Switch,Dual emitter; Headlamp; IP68 waterproof,High CRI flood + throw combination headlamp,2024,Received,Active
+Wurkkos,TS10 V2,White MAO,MAO,Tube; Compact,14500,3x CSP2323,4000K,,Linear + FET,Anduril 2,RGB aux LEDs; MAO finish,,2024,Received,Active
+Wurkkos,TS10 V2,Green,Anodized,Tube; Compact,14500,3x CSP2323,6000K,,Linear + FET,Anduril 2,RGB aux LEDs,,2025,Received,Active
+Wurkkos,TS10 V2,Orange,Anodized,Tube; Compact,14500,3x CSP2323,4000K,,Linear + FET,Anduril 2,RGB aux LEDs,,2025,Received,Active
+Wurkkos,TS10 V2,Orange,Anodized,Tube; Compact,14500,3x CSP2323,4000K,,Linear + FET,Anduril 2,RGB aux LEDs,,2025,In Transit,Active
+Wurkkos,TS10 V2,Copper+Titanium,Copper+Titanium,Tube; Compact,14500,3x CSP2323,4000K,,Linear + FET,Anduril 2,RGB aux LEDs,,2025,Received,Active
+Wurkkos,TS10 V2,Copper,Copper,Tube; Compact,14500,3x CSP2323,3000K,,Linear + FET,Anduril 2,RGB aux LEDs,,2025,Received,Active
+Wurkkos,TS10 SG,Blue,Anodized,Tube; Compact,14500,1x SFT25R,6500K,,Linear + FET,Anduril 2,RGB aux LEDs; Single emitter,SG variant,2025,Received,Active

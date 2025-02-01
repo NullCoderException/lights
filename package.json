@@ -1,21 +1,12 @@
 {
-  "name": "flashlight-tracker",
-  "version": "1.0.0",
-  "type": "module",
+  "name": "lights",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "tsc && node dist/index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "papaparse": "^5.5.1"
-  },
-  "devDependencies": {
-    "@types/papaparse": "^5.3.15",
-    "typescript": "^5.7.3"
+    "build": "npm run build --workspaces",
+    "dev": "npm run dev --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
   }
 }
