@@ -19,6 +19,7 @@ export enum Manufacturer {
   NITECORE = "Nitecore",
   CONVOY = "Convoy",
   EMISAR = "Emisar",
+  FIREFLIES = "Fireflies",
 }
 
 export enum FinishGroup {
@@ -59,6 +60,7 @@ export enum FormFactor {
   HEADLAMP = "Headlamp",
   FLAT = "Flat",
   COMPACT = "Compact",
+  KEYCHAIN = "Keychain",
   MULTI_FUNCTION = "Multi-Function",
 }
 

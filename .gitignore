@@ -3,6 +3,9 @@
 /src/**/*.js.map
 /src/**/*.d.ts
 
+# Distribution folder
+/dist/
+
 # Output files
 /flashlights.csv
 
