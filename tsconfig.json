@@ -12,7 +12,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "noEmit": false
+    "noEmit": true
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }
