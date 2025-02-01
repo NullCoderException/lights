@@ -2,8 +2,8 @@
 
 ## Phase 1: Project Setup
 
-- [ ] Create feature/react-app branch
-- [ ] Set up workspace structure:
+- [x] Create feature/react-app branch
+- [x] Set up workspace structure:
 
 ```
 lights
@@ -44,10 +44,10 @@ lights
             └── index.ts
 ```
 
-- [ ] Move existing types to shared package
-- [ ] Move lights.ts to shared/data
+- [x] Move existing types to shared package
+- [x] Move lights.ts to shared/data
 - [ ] Set up Docker environment
-- [ ] Configure TypeScript for all packages
+- [x] Configure TypeScript for all packages
 - [ ] Set up basic CI pipeline (if desired)
 
 ## Phase 2: Backend Development
