@@ -6,23 +6,34 @@
 - [x] Set up workspace structure:
 
 ```
-lights
+./light
 ├── package.json (marks this as workspace root)
-├── tsconfig.json
-├── .gitignore
-├── .vscode
-├── README.md
-└── packages
-    ├── shared
+└── /packages
+    ├── /shared
     │   ├── package.json (name: "@flashlights/shared")
-    │   └── src
-    │       ├── types
-    │       │   └── index.ts
-    │       └── data
-    │           └── lights.ts
-    ├── frontend
+    │   └── /src
+    │       ├── /types
+    │       │   ├── index.ts
+    │       │   └── types.ts
+    │       ├── /data
+    │       │   ├── index.ts
+    │       │   └── lights.ts
+    │       └── index.ts
+    ├── /frontend
+    │   ├── /app
+    │   │   ├── routes
+    │   │   │   └── _index.tsx
+    │   │   ├── entry.client.tsx
+    │   │   ├── entry.server.tsx
+    │   │   ├── root.tsx
+    │   │   └── tailwind.tss
+    │   ├── /public
+    │   ├── vite.config.ts
+    │   ├── tailwind.config.ts
+    │   ├── tsconfig.json
     │   └── package.json (depends on "@flashlights/shared")
-    └── backend
+    └── /backend
+        ├── tsconfig.json
         └── package.json (depends on "@flashlights/shared")
 ```
 
@@ -64,9 +75,9 @@ lights
 ## Phase 3: Frontend Foundation
 
 - [x] Set up React + Remix
-- [ ] Configure Tailwind
+- [x] Configure Tailwind
 - [ ] Set up React Query
-- [ ] Create basic layout components
+- [x] Create basic layout components
 - [ ] Implement routing structure
 - [ ] Create core shared components
 
