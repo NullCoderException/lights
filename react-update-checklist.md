@@ -63,7 +63,7 @@ lights
 
 ## Phase 3: Frontend Foundation
 
-- [ ] Set up React + Remix
+- [x] Set up React + Remix
 - [ ] Configure Tailwind
 - [ ] Set up React Query
 - [ ] Create basic layout components
