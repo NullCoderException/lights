@@ -6,7 +6,7 @@ import {
   ShippingStatus,
   EmitterColor,
   FormFactor,
-} from "../types.js";
+} from "../types/types";
 
 export const lights: Flashlight[] = [
   {
