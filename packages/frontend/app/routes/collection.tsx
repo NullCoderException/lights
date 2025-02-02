@@ -11,25 +11,35 @@ export default function Collection() {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-white p-4 rounded-lg shadow-sm">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm dark:shadow-gray-900/10">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">My Collection</h1>
-          <p className="mt-1 text-base font-medium text-gray-600">
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+            My Collection
+          </h1>
+          <p className="mt-1 text-base font-medium text-gray-600 dark:text-gray-400">
             {lights.length} lights
           </p>
         </div>
 
-        {/* Future filter controls */}
+        {/* Filter controls */}
         <div className="flex gap-4 w-full sm:w-auto">
           <button
             type="button"
-            className="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            className="inline-flex items-center px-3 py-2 border border-gray-300 dark:border-gray-600 
+                     text-sm font-medium rounded-md text-gray-700 dark:text-gray-200 
+                     bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 
+                     focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-gray-800 
+                     focus:ring-blue-500 transition-colors"
           >
             Filter
           </button>
           <button
             type="button"
-            className="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            className="inline-flex items-center px-3 py-2 border border-gray-300 dark:border-gray-600 
+                     text-sm font-medium rounded-md text-gray-700 dark:text-gray-200 
+                     bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 
+                     focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-gray-800 
+                     focus:ring-blue-500 transition-colors"
           >
             Sort
           </button>
