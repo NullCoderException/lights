@@ -1,7 +1,7 @@
-import type { MetaFunction } from "@remix-run/node";
+import { cssBundleHref } from "@remix-run/css-bundle";
+import type { LinksFunction } from "@remix-run/node";
 import {
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
@@ -9,29 +9,29 @@ import {
 } from "@remix-run/react";
 import RootLayout from "./components/layout/RootLayout";
 
-export const meta: MetaFunction = () => {
-  return [
-    { title: "Flashlight Collection" },
-    { name: "description", content: "Personal flashlight collection manager" },
-  ];
-};
+// CSS imports
+import tailwindStyles from "./tailwind.css?url";
+
+export const links: LinksFunction = () => [
+  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+  { rel: "stylesheet", href: tailwindStyles },
+];
 
 export default function App() {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="h-full">
         <RootLayout>
           <Outlet />
         </RootLayout>
         <ScrollRestoration />
         <Scripts />
-        <LiveReload />
       </body>
     </html>
   );
