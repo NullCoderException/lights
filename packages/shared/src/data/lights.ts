@@ -6,6 +6,7 @@ import {
   ShippingStatus,
   EmitterColor,
   FormFactor,
+  IPRating,
 } from "../types/types";
 
 export const lights: Flashlight[] = [
@@ -27,6 +28,7 @@ export const lights: Flashlight[] = [
     ui: "Dual Switch",
     anduril: false,
     form_factors: [FormFactor.TUBE],
+    ip_rating: IPRating.IP68,
     special_features: ["USB-C charging"],
     notes: "",
     purchase_date: "2024",
@@ -41,7 +43,7 @@ export const lights: Flashlight[] = [
     battery_type: BatteryType.TWENTY1700,
     emitters: [
       {
-        type: "SFT-70",
+        type: "XHP70.3 HI",
         color: EmitterColor.WHITE,
         cct: "6500K",
         count: 1,
@@ -51,6 +53,7 @@ export const lights: Flashlight[] = [
     ui: "Dual Switch",
     anduril: false,
     form_factors: [FormFactor.TUBE],
+    ip_rating: IPRating.IP68,
     special_features: ["MAO finish", "TIR optic"],
     notes: "",
     purchase_date: "2024",
@@ -75,6 +78,7 @@ export const lights: Flashlight[] = [
     ui: "Side Switch",
     anduril: false,
     form_factors: [FormFactor.TUBE],
+    ip_rating: IPRating.IP68,
     special_features: ["Titanium construction"],
     notes: "",
     purchase_date: "2025",
@@ -99,6 +103,7 @@ export const lights: Flashlight[] = [
     ui: "Tail Switch",
     anduril: false,
     form_factors: [FormFactor.TUBE, FormFactor.COMPACT],
+    ip_rating: IPRating.IP68,
     special_features: ["Titanium construction", "Dual fuel"],
     notes: "",
     purchase_date: "2025",
@@ -123,6 +128,7 @@ export const lights: Flashlight[] = [
     ui: "Tail Switch",
     anduril: false,
     form_factors: [FormFactor.TUBE],
+    ip_rating: IPRating.IP68,
     special_features: ["Dual fuel"],
     notes: "",
     purchase_date: "2025",
@@ -148,6 +154,7 @@ export const lights: Flashlight[] = [
     ui: "Tail Switch",
     anduril: false,
     form_factors: [FormFactor.TUBE, FormFactor.COMPACT],
+    ip_rating: IPRating.IP68,
     special_features: ["Dual fuel", "EDC"],
     notes: "",
     purchase_date: "2025",
@@ -173,6 +180,7 @@ export const lights: Flashlight[] = [
     anduril: false,
     form_factors: [FormFactor.TUBE, FormFactor.COMPACT],
     special_features: ["Dual fuel", "Titanium construction"],
+    ip_rating: IPRating.IP68,
     notes: "Cool white version",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
@@ -197,6 +205,7 @@ export const lights: Flashlight[] = [
     anduril: false,
     form_factors: [FormFactor.TUBE, FormFactor.COMPACT],
     special_features: ["Dual fuel", "Titanium construction", "Cracked finish"],
+    ip_rating: IPRating.IP68,
     notes: "No memory version",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
@@ -259,6 +268,30 @@ export const lights: Flashlight[] = [
     status: "Active",
   },
   {
+    model: "D4K",
+    manufacturer: Manufacturer.EMISAR,
+    finish: "Copper",
+    finish_group: FinishGroup.COPPER,
+    battery_type: BatteryType.TWENTY1700,
+    emitters: [
+      {
+        type: "FFL351A",
+        color: EmitterColor.WHITE,
+        cct: "1800K",
+        count: 4,
+      },
+    ],
+    driver: "Linear + FET",
+    ui: "Anduril 2",
+    anduril: true,
+    form_factors: [FormFactor.TUBE],
+    special_features: ["RGB aux LEDs", "Copper Construction", "jlhawaii808"],
+    notes: "Warm",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.RECEIVED,
+    status: "Active",
+  },
+  {
     model: "D3AA",
     manufacturer: Manufacturer.EMISAR,
     finish: "Gray",
@@ -276,7 +309,12 @@ export const lights: Flashlight[] = [
     ui: "Anduril 2",
     anduril: true,
     form_factors: [FormFactor.TUBE],
-    special_features: ["RGB aux LEDs", "Triple emitter", "Dual fuel"],
+    special_features: [
+      "RGB aux LEDs",
+      "Triple emitter",
+      "Dual fuel",
+      "jlhawaii808",
+    ],
     notes: "",
     purchase_date: "2024",
     shipping_status: ShippingStatus.RECEIVED,
@@ -332,12 +370,336 @@ export const lights: Flashlight[] = [
     status: "Active",
   },
 
+  //Nitecore lights
+  {
+    model: "EDC23",
+    manufacturer: Manufacturer.NITECORE,
+    finish: "Black", // Standard finish for Nitecore
+    finish_group: FinishGroup.ANODIZED,
+    battery_type: BatteryType.BUILT_IN, // Based on the description of USB-C rechargeable
+    emitters: [
+      {
+        type: "UHi 25",
+        color: EmitterColor.WHITE,
+        cct: "6500K", // Typical CCT for Nitecore, adjust if you know it's different
+        count: 2,
+      },
+    ],
+    driver: "Proprietary", // Nitecore typically uses proprietary drivers
+    ui: "Side Switch",
+    anduril: false,
+    form_factors: [FormFactor.FLAT, FormFactor.COMPACT],
+    ip_rating: IPRating.IP54,
+    special_features: [
+      "USB-C charging",
+      "OLED display",
+      "Dual lockout modes",
+      "Ultra-slim design",
+      "Mode memory",
+    ],
+    notes: "Ultra-slim EDC light with 2500 lumens and digital OLED screen",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.RECEIVED, // Assuming received like the others
+    status: "Active",
+  },
+  {
+    model: "NU20 Classic",
+    manufacturer: Manufacturer.NITECORE,
+    finish: "Black", // Standard finish for Nitecore headlamps
+    finish_group: FinishGroup.ANODIZED,
+    battery_type: BatteryType.BUILT_IN, // Built-in rechargeable battery
+    emitters: [
+      {
+        type: "UHE LED",
+        color: EmitterColor.WHITE,
+        cct: "6500K", // Typical CCT for Nitecore's primary emitters
+        count: 1,
+      },
+      {
+        type: "Auxiliary",
+        color: EmitterColor.WHITE,
+        cct: "6500K",
+        count: 1,
+      },
+      {
+        type: "Auxiliary",
+        color: EmitterColor.RED,
+        cct: null,
+        count: 1,
+      },
+    ],
+    driver: "Proprietary", // Nitecore uses their own drivers
+    ui: "Dual Button",
+    anduril: false,
+    form_factors: [FormFactor.HEADLAMP],
+    ip_rating: IPRating.IP66,
+    special_features: [
+      "USB-C charging",
+      "Ultralight design",
+      "Red light mode",
+      "Triple output system",
+      "IP66 waterproof",
+    ],
+    notes:
+      "Lightweight headlamp with triple output system (primary white, reading light, and red light)",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.RECEIVED,
+    status: "Active",
+  },
+
   // Olight lights
+  {
+    model: "Arkfield Ultra",
+    manufacturer: Manufacturer.OLIGHT,
+    finish: "Olive Green", // Based on the description of matte finish
+    finish_group: FinishGroup.ANODIZED,
+    battery_type: BatteryType.BUILT_IN, // Olight typically uses built-in batteries in these compact lights
+    emitters: [
+      {
+        type: "LED",
+        color: EmitterColor.WHITE,
+        cct: "4000K-5000K", // Average of 4000K-5000K range you mentioned
+        count: 1,
+      },
+      {
+        type: "UV",
+        color: EmitterColor.UV,
+        cct: "900mw",
+        count: 1,
+      },
+      {
+        type: "Green Laser",
+        color: EmitterColor.LASER_GREEN,
+        cct: "5mw",
+        count: 1,
+      },
+    ],
+    driver: "Proprietary", // Olight typically uses proprietary drivers
+    ui: "Side Switch",
+    anduril: false,
+    form_factors: [FormFactor.FLAT, FormFactor.MULTI_FUNCTION],
+    special_features: [
+      "UV light",
+      "Green laser",
+      "Glass lens",
+      "Multi-function",
+      "O-aluminum construction",
+      "USB-C charging",
+    ],
+    notes:
+      "Neutral white version (4000K-5000K), features white, UV, and green laser",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.RECEIVED,
+    status: "Active",
+  },
+  {
+    model: "Oclip Pro",
+    manufacturer: Manufacturer.OLIGHT,
+    finish: "Orange",
+    finish_group: FinishGroup.ANODIZED,
+    battery_type: BatteryType.BUILT_IN, // Built-in 580mAh battery
+    emitters: [
+      {
+        type: "LED",
+        color: EmitterColor.WHITE,
+        cct: "6000K", // Average of 5700-6500K for floodlight
+        count: 1,
+      },
+      {
+        type: "LED",
+        color: EmitterColor.WHITE,
+        cct: "6350K", // Average of 5700-7000K for spotlight
+        count: 1,
+      },
+      {
+        type: "LED",
+        color: EmitterColor.RED,
+        cct: null,
+        count: 1,
+      },
+    ],
+    driver: "Proprietary", // Olight uses proprietary drivers
+    ui: "Side Switch",
+    anduril: false,
+    form_factors: [
+      FormFactor.FLAT,
+      FormFactor.COMPACT,
+      FormFactor.MULTI_FUNCTION,
+    ],
+    ip_rating: IPRating.IPX6,
+    special_features: [
+      "USB-C charging",
+      "Triple light system",
+      "Clip-on design",
+      "Magnetic base",
+      "IPX6 waterproof",
+    ],
+    notes:
+      "Multi-function light with flood, spot, and red modes; selectable via side rotation switch",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.RECEIVED,
+    status: "Active",
+  },
+  {
+    model: "iMini 2",
+    manufacturer: Manufacturer.OLIGHT,
+    finish: "Orange", // Based on the color shown in your selection
+    finish_group: FinishGroup.ANODIZED,
+    battery_type: BatteryType.BUILT_IN, // Uses a built-in 10180 80mAh battery
+    emitters: [
+      {
+        type: "LED",
+        color: EmitterColor.WHITE,
+        cct: "6500K", // Listed as "Cool White" in specs
+        count: 1,
+      },
+    ],
+    driver: "Proprietary", // Olight uses proprietary drivers
+    ui: "Magnetic Separation", // Unique UI - detach body from magnetic cap to activate
+    anduril: false,
+    form_factors: [FormFactor.TUBE, FormFactor.COMPACT],
+    ip_rating: IPRating.IPX6,
+    special_features: [
+      "USB charging",
+      "Magnetic base",
+      "Keychain compatible",
+      "Integrated USB plug",
+      "IPX6 waterproof",
+    ],
+    notes:
+      "Ultra-compact keychain light with magnetic activation system and integrated USB charging",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.RECEIVED,
+    status: "Active",
+  },
+  {
+    model: "iMini 2",
+    manufacturer: Manufacturer.OLIGHT,
+    finish: "OD Green",
+    finish_group: FinishGroup.ANODIZED,
+    battery_type: BatteryType.BUILT_IN, // Uses a built-in 10180 80mAh battery
+    emitters: [
+      {
+        type: "LED",
+        color: EmitterColor.WHITE,
+        cct: "6500K", // Listed as "Cool White" in specs
+        count: 1,
+      },
+    ],
+    driver: "Proprietary", // Olight uses proprietary drivers
+    ui: "Magnetic Separation", // Unique UI - detach body from magnetic cap to activate
+    anduril: false,
+    form_factors: [FormFactor.TUBE, FormFactor.COMPACT],
+    special_features: [
+      "USB charging",
+      "Magnetic base",
+      "Keychain compatible",
+      "Integrated USB plug",
+      "IPX6 waterproof",
+    ],
+    notes:
+      "Ultra-compact keychain light with magnetic activation system and integrated USB charging",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.RECEIVED,
+    status: "Storage",
+  },
+  {
+    model: "iMini 2",
+    manufacturer: Manufacturer.OLIGHT,
+    finish: "Orange", // Based on the color shown in your selection
+    finish_group: FinishGroup.ANODIZED,
+    battery_type: BatteryType.BUILT_IN, // Uses a built-in 10180 80mAh battery
+    emitters: [
+      {
+        type: "LED",
+        color: EmitterColor.WHITE,
+        cct: "6500K", // Listed as "Cool White" in specs
+        count: 1,
+      },
+    ],
+    driver: "Proprietary", // Olight uses proprietary drivers
+    ui: "Magnetic Separation", // Unique UI - detach body from magnetic cap to activate
+    anduril: false,
+    form_factors: [FormFactor.TUBE, FormFactor.COMPACT],
+    special_features: [
+      "USB charging",
+      "Magnetic base",
+      "Keychain compatible",
+      "Integrated USB plug",
+      "IPX6 waterproof",
+    ],
+    notes:
+      "Ultra-compact keychain light with magnetic activation system and integrated USB charging",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.RECEIVED,
+    status: "Active",
+  },
+  {
+    model: "i3T 2 EOS",
+    manufacturer: Manufacturer.OLIGHT,
+    finish: "Black",
+    finish_group: FinishGroup.ANODIZED,
+    battery_type: BatteryType.AAA, // Can use AAA or 10440 with protection
+    emitters: [
+      {
+        type: "LED",
+        color: EmitterColor.WHITE,
+        cct: "6500K", // Typical Olight cool white
+        count: 1,
+      },
+    ],
+    driver: "Dual-mode", // Simple high/low driver
+    ui: "Tail Switch",
+    anduril: false,
+    form_factors: [FormFactor.TUBE, FormFactor.COMPACT],
+    special_features: [
+      "Dual fuel capability",
+      "Deep carry clip",
+      "Mode memory",
+      "Thermal optimization",
+    ],
+    notes:
+      "Compact AAA/10440 EDC light with improved clip design and thermal performance",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.RECEIVED,
+    status: "Storage",
+  },
 
   // Skilhunt lights
   {
+    model: "EC200S",
+    manufacturer: Manufacturer.SKILHUNT,
+    finish: "Gunmetal Gray",
+    finish_group: FinishGroup.ANODIZED,
+    battery_type: BatteryType.EIGHTEEN650,
+    emitters: [
+      {
+        type: "519A",
+        color: EmitterColor.WHITE,
+        cct: "4500K",
+        count: 2,
+      },
+      {
+        type: "519A",
+        color: EmitterColor.WHITE,
+        cct: "3000K",
+        count: 1,
+      },
+    ],
+    driver: "Buck", // Assuming buck driver based on quality of the light
+    ui: "Side Switch",
+    anduril: false,
+    form_factors: [FormFactor.TUBE],
+    ip_rating: IPRating.IPX8,
+    special_features: ["USB-C charging", "Dual channel", "High CRI"],
+    notes: "Dual channel with 2×519A 4500K + 1×519A 3000K",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.RECEIVED,
+    status: "Active",
+  },
+  {
     model: "E3A",
-    manufacturer: Manufacturer.SKILLHUNT,
+    manufacturer: Manufacturer.SKILHUNT,
     finish: "Slate Blue",
     finish_group: FinishGroup.ANODIZED,
     battery_type: BatteryType.DUAL_FUEL_AAA,
@@ -363,6 +725,64 @@ export const lights: Flashlight[] = [
     shipping_status: ShippingStatus.RECEIVED,
     status: "Active",
   },
+  {
+    model: "E3A",
+    manufacturer: Manufacturer.SKILHUNT,
+    finish: "Slate Blue",
+    finish_group: FinishGroup.ANODIZED,
+    battery_type: BatteryType.DUAL_FUEL_AAA,
+    emitters: [
+      {
+        type: "LH351B",
+        color: EmitterColor.WHITE,
+        cct: "5000K", // Assuming neutral white based on typical Skilhunt specs
+        count: 1,
+      },
+    ],
+    driver: "Linear", // Simple single-mode driver
+    ui: "Twist",
+    form_factors: [FormFactor.TUBE, FormFactor.KEYCHAIN],
+    anduril: false,
+    special_features: [
+      "Keychain light",
+      "IPX-8 waterproof",
+      "Bead surface lens",
+    ],
+    notes: "Single mode 100 lumen keychain light",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.RECEIVED,
+    status: "Storage",
+  },
+  {
+    model: "EK1",
+    manufacturer: Manufacturer.SKILHUNT,
+    finish: "Olive Green", // Using the black color as mentioned
+    finish_group: FinishGroup.ANODIZED,
+    battery_type: BatteryType.BUILT_IN, // Built-in 10220 130mAh Li-ion battery
+    emitters: [
+      {
+        type: "Nichia 219F", // Assuming you have the high CRI version
+        color: EmitterColor.WHITE,
+        cct: "5000K", // High CRI version
+        count: 1,
+      },
+    ],
+    driver: "Dual-mode", // Based on the low/high mode structure
+    ui: "Twist", // Assuming it's twist activation like many keychain lights
+    anduril: false,
+    form_factors: [FormFactor.TUBE, FormFactor.COMPACT],
+    special_features: [
+      "USB-C charging",
+      "Keychain compatible",
+      "High CRI",
+      "IPX8 waterproof",
+    ],
+    notes:
+      "Ultra-compact USB-C rechargeable keychain light with Nichia 219F 5000K high CRI emitter",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.RECEIVED,
+    status: "Storage",
+  },
   // Sofirn lights
   {
     model: "SC13A",
@@ -382,6 +802,7 @@ export const lights: Flashlight[] = [
     ui: "Anduril 2",
     anduril: true,
     form_factors: [FormFactor.TUBE, FormFactor.COMPACT],
+    ip_rating: IPRating.IP68,
     special_features: ["Aux LEDs", "USB-C charging"],
     notes: "",
     purchase_date: "2025",
@@ -418,6 +839,7 @@ export const lights: Flashlight[] = [
     ui: "Rotary",
     anduril: false,
     form_factors: [FormFactor.TUBE, FormFactor.HEADLAMP],
+    ip_rating: IPRating.IP65,
     special_features: [
       "Headlamp",
       "Dual emitter",
@@ -449,10 +871,11 @@ export const lights: Flashlight[] = [
         count: 1,
       },
     ],
-    driver: "Buck",
+    driver: "Linear + FET",
     ui: "Side Switch",
     anduril: false,
     form_factors: [FormFactor.TUBE, FormFactor.HEADLAMP],
+    ip_rating: IPRating.IPX6,
     special_features: ["Headlamp", "USB-C charging"],
     notes: "Old headlamp",
     purchase_date: "2024",
@@ -489,6 +912,7 @@ export const lights: Flashlight[] = [
     ui: "Rotary + Side Switch",
     anduril: false,
     form_factors: [FormFactor.TUBE, FormFactor.MULTI_FUNCTION],
+    ip_rating: IPRating.IP66,
     special_features: [
       "Rotary mode select",
       "RGB side lights",
@@ -519,6 +943,7 @@ export const lights: Flashlight[] = [
     ui: "Dual Switch",
     anduril: true,
     form_factors: [FormFactor.TUBE, FormFactor.TUBE],
+    ip_rating: IPRating.IP68,
     special_features: ["Side + Tail switch", "USB-C charging"],
     notes: "",
     purchase_date: "2025",
@@ -544,6 +969,7 @@ export const lights: Flashlight[] = [
     ui: "Side Switch",
     anduril: false,
     form_factors: [FormFactor.TUBE],
+    ip_rating: IPRating.IP68,
     special_features: ["USB-C charging", "Magnetic tail"],
     notes: "",
     purchase_date: "2024",
@@ -568,6 +994,7 @@ export const lights: Flashlight[] = [
     ui: "Side Switch",
     anduril: false,
     form_factors: [FormFactor.TUBE],
+    ip_rating: IPRating.IP68,
     special_features: ["USB-C charging", "Magnetic tail"],
     notes: "",
     purchase_date: "2025",
@@ -592,6 +1019,7 @@ export const lights: Flashlight[] = [
     ui: "Side Switch",
     anduril: false,
     form_factors: [FormFactor.TUBE],
+    ip_rating: IPRating.IP68,
     special_features: ["USB-C charging", "Magnetic tail"],
     notes: "Original FC11 version",
     purchase_date: "2024",
@@ -640,6 +1068,7 @@ export const lights: Flashlight[] = [
     ui: "Dual Side Switch",
     anduril: false,
     form_factors: [FormFactor.FLAT, FormFactor.MULTI_FUNCTION],
+    ip_rating: IPRating.IP65,
     special_features: [
       "UV light",
       "Green laser",
@@ -676,6 +1105,7 @@ export const lights: Flashlight[] = [
       FormFactor.RIGHT_ANGLE,
       FormFactor.HEADLAMP,
     ],
+    ip_rating: IPRating.IP68,
     special_features: ["MAO finish", "Right angle light", "USB-C charging"],
     notes: "",
     purchase_date: "2025",
@@ -700,6 +1130,7 @@ export const lights: Flashlight[] = [
     ui: "Anduril 2",
     anduril: true,
     form_factors: [FormFactor.TUBE],
+    ip_rating: IPRating.IP68,
     special_features: ["RGB aux LEDs", "USB-C charging"],
     notes: "",
     purchase_date: "2025",
@@ -758,6 +1189,7 @@ export const lights: Flashlight[] = [
       FormFactor.RIGHT_ANGLE,
       FormFactor.HEADLAMP,
     ],
+    ip_rating: IPRating.IP68,
     special_features: [
       "Dual emitter",
       "Headlamp",
@@ -787,6 +1219,7 @@ export const lights: Flashlight[] = [
     ui: "Anduril 2",
     anduril: true,
     form_factors: [FormFactor.TUBE, FormFactor.COMPACT],
+    ip_rating: IPRating.IPX8,
     special_features: ["RGB aux LEDs", "MAO finish"],
     notes: "",
     purchase_date: "2024",
@@ -811,6 +1244,7 @@ export const lights: Flashlight[] = [
     ui: "Anduril 2",
     anduril: true,
     form_factors: [FormFactor.TUBE, FormFactor.COMPACT],
+    ip_rating: IPRating.IPX8,
     special_features: ["RGB aux LEDs"],
     notes: "",
     purchase_date: "2025",
@@ -835,6 +1269,7 @@ export const lights: Flashlight[] = [
     ui: "Anduril 2",
     anduril: true,
     form_factors: [FormFactor.TUBE, FormFactor.COMPACT],
+    ip_rating: IPRating.IPX8,
     special_features: ["RGB aux LEDs"],
     notes: "",
     purchase_date: "2025",
@@ -859,6 +1294,7 @@ export const lights: Flashlight[] = [
     ui: "Anduril 2",
     anduril: true,
     form_factors: [FormFactor.TUBE, FormFactor.COMPACT],
+    ip_rating: IPRating.IPX8,
     special_features: ["RGB aux LEDs"],
     notes: "",
     purchase_date: "2025",
@@ -883,6 +1319,7 @@ export const lights: Flashlight[] = [
     ui: "Anduril 2",
     anduril: true,
     form_factors: [FormFactor.TUBE, FormFactor.COMPACT],
+    ip_rating: IPRating.IPX8,
     special_features: ["RGB aux LEDs"],
     notes: "",
     purchase_date: "2025",
@@ -907,6 +1344,7 @@ export const lights: Flashlight[] = [
     ui: "Anduril 2",
     anduril: true,
     form_factors: [FormFactor.TUBE, FormFactor.COMPACT],
+    ip_rating: IPRating.IPX8,
     special_features: ["RGB aux LEDs", "Single emitter"],
     notes: "SG variant",
     purchase_date: "2025",
