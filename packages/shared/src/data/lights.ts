@@ -444,7 +444,7 @@ export const lights: Flashlight[] = [
       "Lightweight headlamp with triple output system (primary white, reading light, and red light)",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: "New",
   },
 
   // Olight lights
@@ -538,7 +538,7 @@ export const lights: Flashlight[] = [
       "Multi-function light with flood, spot, and red modes; selectable via side rotation switch",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: "New",
   },
   {
     model: "iMini 2",
@@ -601,38 +601,7 @@ export const lights: Flashlight[] = [
       "Ultra-compact keychain light with magnetic activation system and integrated USB charging",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Storage",
-  },
-  {
-    model: "iMini 2",
-    manufacturer: Manufacturer.OLIGHT,
-    finish: "Orange", // Based on the color shown in your selection
-    finish_group: FinishGroup.ANODIZED,
-    battery_type: BatteryType.BUILT_IN, // Uses a built-in 10180 80mAh battery
-    emitters: [
-      {
-        type: "LED",
-        color: EmitterColor.WHITE,
-        cct: "6500K", // Listed as "Cool White" in specs
-        count: 1,
-      },
-    ],
-    driver: "Proprietary", // Olight uses proprietary drivers
-    ui: "Magnetic Separation", // Unique UI - detach body from magnetic cap to activate
-    anduril: false,
-    form_factors: [FormFactor.TUBE, FormFactor.COMPACT],
-    special_features: [
-      "USB charging",
-      "Magnetic base",
-      "Keychain compatible",
-      "Integrated USB plug",
-      "IPX6 waterproof",
-    ],
-    notes:
-      "Ultra-compact keychain light with magnetic activation system and integrated USB charging",
-    purchase_date: "2025",
-    shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: "New",
   },
   {
     model: "i3T 2 EOS",
@@ -662,9 +631,38 @@ export const lights: Flashlight[] = [
       "Compact AAA/10440 EDC light with improved clip design and thermal performance",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Storage",
+    status: "New",
   },
-
+  {
+    model: "i3T 2 EOS",
+    manufacturer: Manufacturer.OLIGHT,
+    finish: "Porcelain",
+    finish_group: FinishGroup.ANODIZED,
+    battery_type: BatteryType.AAA, // Can use AAA or 10440 with protection
+    emitters: [
+      {
+        type: "LED",
+        color: EmitterColor.WHITE,
+        cct: "6500K", // Typical Olight cool white
+        count: 1,
+      },
+    ],
+    driver: "Dual-mode", // Simple high/low driver
+    ui: "Tail Switch",
+    anduril: false,
+    form_factors: [FormFactor.TUBE, FormFactor.COMPACT],
+    special_features: [
+      "Dual fuel capability",
+      "Deep carry clip",
+      "Mode memory",
+      "Thermal optimization",
+    ],
+    notes:
+      "Compact AAA/10440 EDC light with improved clip design and thermal performance",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.RECEIVED,
+    status: "New",
+  },
   // Skilhunt lights
   {
     model: "EC200S",
@@ -714,6 +712,7 @@ export const lights: Flashlight[] = [
     driver: "Linear", // Simple single-mode driver
     ui: "Twist",
     form_factors: [FormFactor.TUBE, FormFactor.KEYCHAIN],
+    ip_rating: IPRating.IPX8,
     anduril: false,
     special_features: [
       "Keychain light",
@@ -742,6 +741,7 @@ export const lights: Flashlight[] = [
     driver: "Linear", // Simple single-mode driver
     ui: "Twist",
     form_factors: [FormFactor.TUBE, FormFactor.KEYCHAIN],
+    ip_rating: IPRating.IPX8,
     anduril: false,
     special_features: [
       "Keychain light",
@@ -751,7 +751,7 @@ export const lights: Flashlight[] = [
     notes: "Single mode 100 lumen keychain light",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Storage",
+    status: "New",
   },
   {
     model: "EK1",
@@ -781,8 +781,9 @@ export const lights: Flashlight[] = [
       "Ultra-compact USB-C rechargeable keychain light with Nichia 219F 5000K high CRI emitter",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Storage",
+    status: "New",
   },
+
   // Sofirn lights
   {
     model: "SC13A",

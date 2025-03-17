@@ -95,5 +95,5 @@ export interface Flashlight {
   notes: string;
   purchase_date: string;
   shipping_status: ShippingStatus;
-  status: "Active" | "Storage" | "Gifted" | "Retired";
+  status: "New" | "Active" | "Storage" | "Gifted" | "Retired";
 }

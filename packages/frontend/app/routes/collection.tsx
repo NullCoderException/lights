@@ -1,13 +1,15 @@
 import { useLoaderData } from "@remix-run/react";
-import { lights } from "@lights/shared";
 import FlashlightCard from "../components/flashlights/FlashlightCard";
+import { Flashlight } from "@lights/shared";
 
 export const loader = async () => {
+  const response = await fetch("http://localhost:3000/api/lights");
+  const lights = await response.json();
   return { lights };
 };
 
 export default function Collection() {
-  const { lights } = useLoaderData<typeof loader>();
+  const { lights } = useLoaderData<{ lights: Flashlight[] }>();
 
   return (
     <div className="space-y-6">
@@ -48,7 +50,7 @@ export default function Collection() {
 
       {/* Grid of flashlights */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {lights.map((light) => (
+        {lights.map((light: Flashlight) => (
           <FlashlightCard
             key={`${light.manufacturer}-${light.model}-${light.finish}`}
             light={light}
