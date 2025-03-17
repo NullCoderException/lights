@@ -14,7 +14,7 @@ export enum Manufacturer {
   ACEBEAM = "Acebeam",
   WURKKOS = "Wurkkos",
   SOFIRN = "Sofirn",
-  SKILLHUNT = "Skilhunt",
+  SKILHUNT = "Skilhunt",
   OLIGHT = "Olight",
   NITECORE = "Nitecore",
   CONVOY = "Convoy",
@@ -64,6 +64,21 @@ export enum FormFactor {
   MULTI_FUNCTION = "Multi-Function",
 }
 
+export enum IPRating {
+  NONE = "None",
+  IPX4 = "IPX4", // Splash resistant
+  IPX5 = "IPX5", // Water jets
+  IPX6 = "IPX6", // Powerful water jets
+  IPX7 = "IPX7", // Temporary immersion (up to 1m for 30 min)
+  IPX8 = "IPX8", // Continuous immersion (beyond 1m)
+  IP54 = "IP54", // Dust protected + splash resistant
+  IP55 = "IP55", // Dust protected + water jets
+  IP65 = "IP65", // Dust tight + powerful water jets
+  IP66 = "IP66", // Dust tight + powerful water jets
+  IP67 = "IP67", // Dust tight + temporary immersion
+  IP68 = "IP68", // Dust tight + continuous immersion
+}
+
 export interface Flashlight {
   model: string;
   manufacturer: Manufacturer;
@@ -75,9 +90,10 @@ export interface Flashlight {
   ui: string;
   anduril: boolean;
   form_factors: FormFactor[];
+  ip_rating?: IPRating;
   special_features: string[];
   notes: string;
   purchase_date: string;
   shipping_status: ShippingStatus;
-  status: "Active" | "Storage" | "Gifted" | "Retired";
+  status: "New" | "Active" | "Storage" | "Gifted" | "Retired";
 }

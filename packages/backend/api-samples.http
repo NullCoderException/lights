@@ -1,0 +1,4 @@
+@base_url = http://localhost:3000
+
+###Get all lights
+GET {{base_url}}/api/lights
