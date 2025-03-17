@@ -3,9 +3,17 @@ import FlashlightCard from "../components/flashlights/FlashlightCard";
 import { Flashlight } from "@lights/shared";
 
 export const loader = async () => {
-  const response = await fetch("http://localhost:3000/api/lights");
-  const lights = await response.json();
-  return { lights };
+  try {
+    const response = await fetch("http://localhost:3000/api/lights");
+    if (!response.ok) {
+      throw new Error(`API error: ${response.status}`);
+    }
+    const lights = await response.json();
+    return { lights };
+  } catch (error) {
+    console.error("Error loading flashlights:", error);
+    return { lights: [] }; // Return an empty array to avoid the "length" error
+  }
 };
 
 export default function Collection() {

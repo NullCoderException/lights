@@ -13,7 +13,7 @@ export enum BatteryType {
 export enum Manufacturer {
   ACEBEAM = "Acebeam",
   WURKKOS = "Wurkkos",
-  SOFIRN = "Sofirn",
+  SOFIRN = "Sofrin",
   SKILHUNT = "Skilhunt",
   OLIGHT = "Olight",
   NITECORE = "Nitecore",
