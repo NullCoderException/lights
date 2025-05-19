@@ -78,6 +78,7 @@ export enum FormFactor {
   COMPACT = "Compact",
   KEYCHAIN = "Keychain",
   MULTI_FUNCTION = "Multi-Function",
+  LANTERN = "Lantern",
 }
 
 export enum IPRating {
