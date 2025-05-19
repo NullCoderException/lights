@@ -1272,6 +1272,45 @@ export const lights: Flashlight[] = [
     shipping_status: ShippingStatus.RECEIVED,
     status: FlashlightStatus.ACTIVE,
   },
+  {
+    model: "BLF LT1",
+    manufacturer: Manufacturer.SOFIRN,
+    finish: "Green",
+    finish_group: FinishGroup.ANODIZED,
+    battery_type: BatteryType.QUAD_EIGHTEEN650, // Uses 4x 18650 batteries
+    emitters: [
+      {
+        type: "LH351D",
+        color: EmitterColor.WHITE,
+        cct: "5000K",
+        count: 4,
+      },
+      {
+        type: "LH351D",
+        color: EmitterColor.WHITE,
+        cct: "2700K",
+        count: 4,
+      },
+    ],
+    driver: "Buck", // Assuming buck driver for efficiency
+    ui: "Anduril 2",
+    anduril: true,
+    form_factors: [FormFactor.TUBE, FormFactor.LANTERN], // You might need to add LANTERN to your FormFactor enum
+    ip_rating: IPRating.IPX7, // As specifically mentioned in specs
+    special_features: [
+      "Variable CCT (2700K-5000K)",
+      "USB-C charging",
+      "Power bank function",
+      "High CRI (90+)",
+      "Quad battery configuration",
+      "Stepped/smooth ramping",
+    ],
+    notes:
+      "Community-designed lantern with 8 high CRI emitters (4x 5000K + 4x 2700K) for variable color temperature. Features Anduril 2 UI with customizable modes, power bank function, and up to 800 lumens output.",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.RECEIVED,
+    status: FlashlightStatus.ACTIVE,
+  },
   // Wurkkos
   {
     model: "FC11C",
