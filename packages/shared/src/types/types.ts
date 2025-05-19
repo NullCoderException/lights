@@ -4,7 +4,9 @@ export enum BatteryType {
   FOURTEEN500 = "14500", // Using FOURTEEN500 since enums can't start with numbers
   EIGHTEEN350 = "18350",
   EIGHTEEN650 = "18650",
+  QUAD_EIGHTEEN650 = "4x 18650",
   TWENTY1700 = "21700",
+  TRIPLE_TWENTY1700 = "3x 21700",
   DUAL_FUEL_AA = "AA/14500", // For your Ryder and other dual fuel lights
   DUAL_FUEL_AAA = "AAA/10440", // For future compatibility
   BUILT_IN = "Built-in", // For non-replaceable batteries,
@@ -20,6 +22,7 @@ export enum Manufacturer {
   CONVOY = "Convoy",
   EMISAR = "Emisar",
   FIREFLIES = "Fireflies",
+  REYLIGHT = "Reylight",
 }
 
 export enum FinishGroup {
@@ -28,6 +31,8 @@ export enum FinishGroup {
   TITANIUM = "Titanium",
   COPPER = "Copper",
   COPPER_TITANIUM = "Copper+Titanium",
+  STAINLESS_STEEL = "Stainless Steel",
+  BRASS = "Brass",
 }
 
 export enum ShippingStatus {
@@ -47,11 +52,22 @@ export enum EmitterColor {
   LASER_RED = "Red Laser",
 }
 
+export enum FlashlightStatus {
+  NEW = "New",
+  ACTIVE = "Active",
+  STORAGE = "Storage",
+  GIFTED = "Gifted",
+  RETIRED = "Retired",
+}
+
 export interface Emitter {
+  id?: string;
+  flashlight_id?: string;
   type: string;
   cct: string | null; // Can be null for non-white emitters
   count: number;
   color: EmitterColor; // Defaults to WHITE if not specified
+  created_at?: string;
 }
 
 export enum FormFactor {
@@ -80,11 +96,13 @@ export enum IPRating {
 }
 
 export interface Flashlight {
+  id?: string;
+  user_id?: string;
   model: string;
   manufacturer: Manufacturer;
   finish: string;
   finish_group: FinishGroup;
-  battery_type: BatteryType; // Updated to use enum
+  battery_type: BatteryType;
   emitters: Emitter[];
   driver: string;
   ui: string;
@@ -92,8 +110,31 @@ export interface Flashlight {
   form_factors: FormFactor[];
   ip_rating?: IPRating;
   special_features: string[];
-  notes: string;
+  notes?: string;
   purchase_date: string;
   shipping_status: ShippingStatus;
-  status: "New" | "Active" | "Storage" | "Gifted" | "Retired";
+  status: FlashlightStatus;
+  created_at?: string;
+  updated_at?: string;
+}
+
+export interface UserPreferences {
+  user_id: string;
+  preferred_cct_min?: number;
+  preferred_cct_max?: number;
+  preferred_battery_types?: string[];
+  preferred_manufacturers?: string[];
+  preferred_form_factors?: string[];
+  preferred_features?: string[];
+  updated_at?: string;
+}
+
+export interface FlashlightManual {
+  id?: string;
+  flashlight_id: string;
+  title: string;
+  content?: string;
+  file_path?: string;
+  embedding?: number[];
+  created_at?: string;
 }

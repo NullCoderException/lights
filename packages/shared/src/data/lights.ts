@@ -7,6 +7,7 @@ import {
   EmitterColor,
   FormFactor,
   IPRating,
+  FlashlightStatus,
 } from "../types/types";
 
 export const lights: Flashlight[] = [
@@ -33,7 +34,7 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2024",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "L35 2.0",
@@ -58,7 +59,7 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2024",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "E70 Mini",
@@ -83,7 +84,7 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "Rider RX 2.0",
@@ -108,7 +109,7 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "Tac AA",
@@ -133,7 +134,7 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   // Pokelit collection
   {
@@ -159,7 +160,7 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "Pokelit",
@@ -184,7 +185,7 @@ export const lights: Flashlight[] = [
     notes: "Cool white version",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "Pokelit",
@@ -209,7 +210,7 @@ export const lights: Flashlight[] = [
     notes: "No memory version",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   // Convoy light
   {
@@ -234,9 +235,114 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
-  // Emisar lights
+  {
+    model: "S2+",
+    manufacturer: Manufacturer.CONVOY,
+    finish: "Brass",
+    finish_group: FinishGroup.BRASS,
+    battery_type: BatteryType.EIGHTEEN650,
+    emitters: [
+      {
+        type: "B35AM",
+        color: EmitterColor.WHITE,
+        cct: "2700K",
+        count: 1,
+      },
+    ],
+    driver: "12-Group",
+    ui: "Click",
+    anduril: false,
+    form_factors: [FormFactor.TUBE],
+    special_features: ["Brass", "High CRI"],
+    notes: "",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.IN_TRANSIT,
+    status: FlashlightStatus.ACTIVE,
+  },
+  {
+    model: "T6",
+    manufacturer: Manufacturer.CONVOY,
+    finish: "Red",
+    finish_group: FinishGroup.ANODIZED,
+    battery_type: BatteryType.DUAL_FUEL_AA,
+    emitters: [
+      {
+        type: "SFT25R",
+        color: EmitterColor.WHITE,
+        cct: "5000K",
+        count: 1,
+      },
+    ],
+    driver: "12-Group",
+    ui: "Click",
+    anduril: false,
+    form_factors: [FormFactor.TUBE],
+    special_features: ["Dual Fuel"],
+    notes: "",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.IN_TRANSIT,
+    status: FlashlightStatus.NEW,
+  },
+  {
+    model: "L21B",
+    manufacturer: Manufacturer.CONVOY,
+    finish: "Blalck",
+    finish_group: FinishGroup.ANODIZED,
+    battery_type: BatteryType.TWENTY1700,
+    emitters: [
+      {
+        type: "KP CSLPM1.F1",
+        color: EmitterColor.GREEN,
+        cct: "520nm",
+        count: 1,
+      },
+    ],
+    driver: "12-Group",
+    ui: "Click",
+    anduril: false,
+    form_factors: [FormFactor.TUBE],
+    special_features: ["Green Light"],
+    notes: "",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.IN_TRANSIT,
+    status: FlashlightStatus.NEW,
+  },
+  {
+    model: "3X21D",
+    manufacturer: Manufacturer.CONVOY,
+    finish: "Black", // Standard Convoy finish, assuming black from images
+    finish_group: FinishGroup.ANODIZED,
+    battery_type: BatteryType.TRIPLE_TWENTY1700, // Uses 3x 21700 batteries in series
+    emitters: [
+      {
+        type: "SBT90.2",
+        color: EmitterColor.WHITE,
+        cct: "5700K", // As mentioned in the specs "Tc:5700K white tint"
+        count: 1,
+      },
+    ],
+    driver: "Buck", // "25amps constant current buck driver" mentioned
+    ui: "Side Switch",
+    anduril: false,
+    form_factors: [FormFactor.TUBE],
+    ip_rating: IPRating.IPX6, // Assuming based on typical Convoy standards
+    special_features: [
+      "25A buck driver",
+      "USB-C charging (3A)",
+      "PD 18W power bank function",
+      "Temperature control protection",
+      "Low voltage protection",
+      "Ultra thrower",
+    ],
+    notes:
+      "Extreme thrower with 90.5mm head diameter, ~825KCD beam intensity. Features ramping UI with tactical mode option. Uses 3x 21700 batteries in series.",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.RECEIVED,
+    status: FlashlightStatus.ACTIVE,
+  },
+  // Emisar lightsKP CSLPM1.F1
   {
     model: "D4K",
     manufacturer: Manufacturer.EMISAR,
@@ -265,7 +371,7 @@ export const lights: Flashlight[] = [
     notes: "Flood + Throw combo",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "D4K",
@@ -289,7 +395,7 @@ export const lights: Flashlight[] = [
     notes: "Warm",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "D3AA",
@@ -318,7 +424,7 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2024",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   //Fireflies lights
   {
@@ -343,7 +449,7 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2025",
     shipping_status: ShippingStatus.ORDERED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "E04 Surge",
@@ -367,9 +473,32 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
-
+  {
+    model: "E04 Surge",
+    manufacturer: Manufacturer.FIREFLIES,
+    finish: "Olive Green",
+    finish_group: FinishGroup.ANODIZED,
+    battery_type: BatteryType.TWENTY1700,
+    emitters: [
+      {
+        type: "FFL505A",
+        color: EmitterColor.WHITE,
+        cct: "3500K-4000K",
+        count: 4,
+      },
+    ],
+    driver: "Lume 1 Buck",
+    ui: "Anduril 2",
+    anduril: true,
+    form_factors: [FormFactor.TUBE],
+    special_features: ["High CRI", "RGB aux LEDs"],
+    notes: "",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.RECEIVED,
+    status: FlashlightStatus.ACTIVE,
+  },
   //Nitecore lights
   {
     model: "EDC23",
@@ -400,7 +529,7 @@ export const lights: Flashlight[] = [
     notes: "Ultra-slim EDC light with 2500 lumens and digital OLED screen",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED, // Assuming received like the others
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "NU20 Classic",
@@ -444,7 +573,7 @@ export const lights: Flashlight[] = [
       "Lightweight headlamp with triple output system (primary white, reading light, and red light)",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "New",
+    status: FlashlightStatus.NEW,
   },
 
   // Olight lights
@@ -490,7 +619,7 @@ export const lights: Flashlight[] = [
       "Neutral white version (4000K-5000K), features white, UV, and green laser",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "Oclip Pro",
@@ -538,7 +667,7 @@ export const lights: Flashlight[] = [
       "Multi-function light with flood, spot, and red modes; selectable via side rotation switch",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "New",
+    status: FlashlightStatus.NEW,
   },
   {
     model: "iMini 2",
@@ -570,7 +699,7 @@ export const lights: Flashlight[] = [
       "Ultra-compact keychain light with magnetic activation system and integrated USB charging",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "iMini 2",
@@ -601,7 +730,7 @@ export const lights: Flashlight[] = [
       "Ultra-compact keychain light with magnetic activation system and integrated USB charging",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "New",
+    status: FlashlightStatus.NEW,
   },
   {
     model: "i3T 2 EOS",
@@ -631,7 +760,7 @@ export const lights: Flashlight[] = [
       "Compact AAA/10440 EDC light with improved clip design and thermal performance",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "New",
+    status: FlashlightStatus.NEW,
   },
   {
     model: "i3T 2 EOS",
@@ -661,7 +790,106 @@ export const lights: Flashlight[] = [
       "Compact AAA/10440 EDC light with improved clip design and thermal performance",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "New",
+    status: FlashlightStatus.NEW,
+  },
+  {
+    model: "Warrior Ultra",
+    manufacturer: Manufacturer.OLIGHT,
+    finish: "Stealth Grey",
+    finish_group: FinishGroup.ANODIZED,
+    battery_type: BatteryType.TWENTY1700, // Assuming based on the 5000mAh capacity
+    emitters: [
+      {
+        type: "SFT70",
+        color: EmitterColor.WHITE,
+        cct: "6500K",
+        count: 1,
+      },
+    ],
+    driver: "Proprietary", // Olight typically uses their own drivers
+    ui: "Dual Switch", // Based on the description of side and tail switches
+    anduril: false,
+    form_factors: [FormFactor.TUBE],
+    ip_rating: IPRating.IPX8, // Assuming IPX8 based on other Olight models, though specific rating not mentioned
+    special_features: [
+      "O-Aluminum construction",
+      "Dual-mode tail switch",
+      "Strike bezel",
+      "Proximity sensor",
+      "USB-C charging",
+      "Battery indicator",
+    ],
+    notes:
+      "Made with O-Aluminum alloy (2x stronger than 6061). 2500 lumens, 320m throw, 5000mAh battery with up to 55 days runtime on low.",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.RECEIVED, // Adjust as needed
+    status: FlashlightStatus.ACTIVE, // Adjust as needed
+  },
+  {
+    model: "Baton Turbo",
+    manufacturer: Manufacturer.OLIGHT,
+    finish: "Roadster", // Assuming this is a red/racing inspired color
+    finish_group: FinishGroup.ANODIZED,
+    battery_type: BatteryType.EIGHTEEN350, // As mentioned in the description with CR123A option
+    emitters: [
+      {
+        type: "SFT25R", // Specific emitter type not mentioned
+        color: EmitterColor.WHITE,
+        cct: "6500K", // Assuming cool white which is typical for Olight throwers
+        count: 1,
+      },
+    ],
+    driver: "Proprietary", // Olight uses their own drivers
+    ui: "Side Switch", // Based on the description of the embedded switch
+    anduril: false,
+    form_factors: [FormFactor.TUBE, FormFactor.COMPACT],
+    ip_rating: IPRating.IPX8, // Assumed based on other Olight models
+    special_features: [
+      "Dual fuel capability (18350 & CR123A)",
+      "Two-way clip",
+      "Throw-focused beam",
+      "Battery indicator",
+      "Pocket thrower",
+      "Recessed switch",
+    ],
+    notes:
+      "Compact thrower with 1,000 lumens, 65,025 candela, and 510m throw distance. Features safety switch design to prevent accidental activation.",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.RECEIVED,
+    status: FlashlightStatus.ACTIVE,
+  },
+  // Reylight lights
+  {
+    model: "Pineapple Mini",
+    manufacturer: Manufacturer.REYLIGHT, // You may need to add this to your Manufacturer enum
+    finish: "Brass",
+    finish_group: FinishGroup.BRASS, // Brass would typically fall under the copper category
+    battery_type: BatteryType.DUAL_FUEL_AAA, // Assuming it can use both AAA and 10440
+    emitters: [
+      {
+        type: "519A",
+        color: EmitterColor.WHITE,
+        cct: "4000K",
+        count: 1,
+      },
+    ],
+    driver: "Programmable", // Custom driver with multiple mode groups
+    ui: "Forward Clicky", // Also described as "tactical switch"
+    anduril: false,
+    form_factors: [FormFactor.TUBE, FormFactor.COMPACT, FormFactor.KEYCHAIN],
+    ip_rating: IPRating.IPX4, // Assuming water resistant but not fully waterproof
+    special_features: [
+      "Brass construction",
+      "Programmable UI",
+      "High CRI (R9080)",
+      "Stainless steel clip",
+      "Steel Flame clip compatible",
+    ],
+    notes:
+      "Features 4 programmable mode groups including moonlight mode. Compatible with 10440 lithium-ion and AAA batteries.",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.RECEIVED,
+    status: FlashlightStatus.ACTIVE,
   },
   // Skilhunt lights
   {
@@ -693,7 +921,7 @@ export const lights: Flashlight[] = [
     notes: "Dual channel with 2×519A 4500K + 1×519A 3000K",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "E3A",
@@ -722,7 +950,7 @@ export const lights: Flashlight[] = [
     notes: "Single mode 100 lumen keychain light",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "E3A",
@@ -751,7 +979,7 @@ export const lights: Flashlight[] = [
     notes: "Single mode 100 lumen keychain light",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "New",
+    status: FlashlightStatus.NEW,
   },
   {
     model: "EK1",
@@ -781,9 +1009,102 @@ export const lights: Flashlight[] = [
       "Ultra-compact USB-C rechargeable keychain light with Nichia 219F 5000K high CRI emitter",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "New",
+    status: FlashlightStatus.NEW,
   },
-
+  {
+    model: "H150",
+    manufacturer: Manufacturer.SKILHUNT,
+    finish: "Vibrant Orange",
+    finish_group: FinishGroup.ANODIZED,
+    battery_type: BatteryType.DUAL_FUEL_AA, // Can use both 14500 and AA batteries
+    emitters: [
+      {
+        type: "519A",
+        color: EmitterColor.WHITE,
+        cct: "3000K",
+        count: 1,
+      },
+    ],
+    driver: "Buck", // Assuming buck driver based on Skilhunt's quality standards
+    ui: "Side Switch",
+    anduril: false,
+    form_factors: [
+      FormFactor.TUBE,
+      FormFactor.RIGHT_ANGLE,
+      FormFactor.HEADLAMP,
+    ],
+    ip_rating: IPRating.IPX8, // As specifically mentioned in specs
+    special_features: [
+      "Dual fuel (14500/AA)",
+      "High CRI (90+)",
+      "Magnetic charging",
+      "Magnetic tailcap",
+      "Ultra-low standby drain",
+      "Headband included",
+    ],
+    notes:
+      "Compact right-angle headlamp with warm white high CRI emitter. Features 1-meter impact resistance and 55-day max runtime.",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.RECEIVED,
+    status: FlashlightStatus.ACTIVE,
+  },
+  {
+    model: "MiX-7 Plus Gen 2",
+    manufacturer: Manufacturer.SKILHUNT,
+    finish: "White",
+    finish_group: FinishGroup.ANODIZED, // Assuming standard anodizing
+    battery_type: BatteryType.EIGHTEEN650,
+    emitters: [
+      {
+        type: "519A",
+        color: EmitterColor.WHITE,
+        cct: "5000K",
+        count: 3,
+      },
+      {
+        type: "UV",
+        color: EmitterColor.UV,
+        cct: "365nm",
+        count: 1,
+      },
+      {
+        type: "Red",
+        color: EmitterColor.RED,
+        cct: null,
+        count: 1,
+      },
+      {
+        type: "Green",
+        color: EmitterColor.GREEN,
+        cct: null,
+        count: 1,
+      },
+      {
+        type: "Blue",
+        color: EmitterColor.BLUE,
+        cct: null,
+        count: 1,
+      },
+    ],
+    driver: "Buck", // Assuming based on Skilhunt's quality standards
+    ui: "Side Switch",
+    anduril: false,
+    form_factors: [FormFactor.TUBE, FormFactor.MULTI_FUNCTION],
+    ip_rating: IPRating.IPX8, // As specifically mentioned in specs
+    special_features: [
+      "Multi-emitter setup",
+      "RGB color mixing",
+      "UV light (1000mw)",
+      "High CRI (R9080)",
+      "Magnetic charging",
+      "White finish",
+    ],
+    notes:
+      "Advanced multi-function light featuring 3x 519A high CRI emitters plus RGB and UV. Capable of color mixing (pink, amber, cyan). Up to 1400 lumens with the 519A emitters and 600 hours max runtime.",
+    purchase_date: "2025",
+    shipping_status: ShippingStatus.RECEIVED,
+    status: FlashlightStatus.ACTIVE,
+  },
   // Sofirn lights
   {
     model: "SC13A",
@@ -808,7 +1129,7 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "HS21",
@@ -850,7 +1171,7 @@ export const lights: Flashlight[] = [
     notes: "Primary headlamp",
     purchase_date: "2024",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "HD25LR",
@@ -881,7 +1202,7 @@ export const lights: Flashlight[] = [
     notes: "Old headlamp",
     purchase_date: "2024",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "IF24 Pro",
@@ -924,7 +1245,7 @@ export const lights: Flashlight[] = [
     notes: "Multifunction light with white, RGB, and special modes",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED, // Assuming it's received since you're adding it
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "SK40",
@@ -949,7 +1270,7 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   // Wurkkos
   {
@@ -975,7 +1296,7 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2024",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "FC11C",
@@ -1000,7 +1321,7 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "FC11",
@@ -1025,7 +1346,7 @@ export const lights: Flashlight[] = [
     notes: "Original FC11 version",
     purchase_date: "2024",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "HD01 Pro",
@@ -1081,7 +1402,7 @@ export const lights: Flashlight[] = [
     notes: "Multi-function light with UV, laser, and RGB aux",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED, // Assuming it's received since you're adding it
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "HD10",
@@ -1111,7 +1432,7 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "TS11",
@@ -1136,7 +1457,7 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "TD05",
@@ -1160,7 +1481,7 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "HD20",
@@ -1200,7 +1521,7 @@ export const lights: Flashlight[] = [
     notes: "High CRI flood + throw combination headlamp",
     purchase_date: "2024",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "TS10 V2",
@@ -1225,7 +1546,7 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2024",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "TS10 V2",
@@ -1250,7 +1571,7 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "TS10 V2",
@@ -1275,7 +1596,7 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "TS10 V2",
@@ -1300,7 +1621,7 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "TS10 V2",
@@ -1325,7 +1646,7 @@ export const lights: Flashlight[] = [
     notes: "",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
   {
     model: "TS10 SG",
@@ -1350,6 +1671,6 @@ export const lights: Flashlight[] = [
     notes: "SG variant",
     purchase_date: "2025",
     shipping_status: ShippingStatus.RECEIVED,
-    status: "Active",
+    status: FlashlightStatus.ACTIVE,
   },
 ];
